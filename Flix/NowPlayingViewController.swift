@@ -12,15 +12,33 @@ import AlamofireImage
 class NowPlayingViewController: UIViewController, UITableViewDataSource {
 
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
     var movies: [[String: Any]] = []
+    var refreshControl: UIRefreshControl!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
+        fetchMovies()
+    }
+    
+    @objc func didPullToRefresh(_ refreshControl: UIRefreshControl) {
+        fetchMovies()
+    }
+    
+    func fetchMovies() {
+        activityIndicator.startAnimating()
+        
+        let alertController = UIAlertController(title: "Networking Error", message: "Internet Connection Error. Cannot Reach Movie Database", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Okay", style: .default) { (action) in }
+        alertController.addAction(okayAction)
         
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -29,14 +47,17 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
             //will run when network request returns
             if let error = error {
                 print(error.localizedDescription)
+                self.refreshControl.endRefreshing()
+                self.present(alertController, animated: true)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]
                 self.movies = movies
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
         }
-        
+        activityIndicator.stopAnimating()
         task.resume()
     }
     

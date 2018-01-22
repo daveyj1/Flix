@@ -70,9 +70,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" largeTitleDisplayMode="always" id="mcQ-aF-DTM" userLabel="Movies">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="dTa-rA-pYY"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Movies" largeTitleDisplayMode="always" id="mcQ-aF-DTM" userLabel="Movies"/>
                     <connections>
                         <outlet property="activityIndicator" destination="ZDN-YD-c95" id="pzD-W0-f3l"/>
                         <outlet property="tableView" destination="P0s-Mb-PPv" id="del-5h-vh5"/>
@@ -215,7 +213,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="VLi-w3-XTm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="I1t-Q5-yQO"/>
@@ -252,6 +250,6 @@
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0JU-3b-rQW"/>
+        <segue reference="FUE-91-HOx"/>
     </inferredMetricsTieBreakers>
 </document>

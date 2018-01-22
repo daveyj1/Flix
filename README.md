@@ -61,13 +61,13 @@ Describe any challenges encountered while building the app.
     See the License for the specific language governing permissions and
     limitations under the License.
     
-    # Project 2 - Flix
+# Project 2 - Flix
     
     Flix is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
     
     Time spent: 3 hours spent in total
     
-    ## User Stories
+## User Stories
     
     The following **required** functionality is completed:
     
@@ -92,7 +92,7 @@ Describe any challenges encountered while building the app.
     1. Modal segues
     2. Adding trailers
     
-    ## Video Walkthrough
+## Video Walkthrough
     
     Here's a walkthrough of implemented user stories:
     
@@ -100,11 +100,11 @@ Describe any challenges encountered while building the app.
     
     GIF created with [LiceCap](http://www.cockos.com/licecap/).
     
-    ## Notes
+## Notes
     
     Describe any challenges encountered while building the app.
     
-    ## License
+## License
     
     Copyright 2018 Joseph Davey
     

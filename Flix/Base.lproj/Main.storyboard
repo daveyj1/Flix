@@ -115,7 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mu-bG-Jas">
-                                <rect key="frame" x="16" y="463" width="343" height="184"/>
+                                <rect key="frame" x="16" y="463" width="343" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqw-zR-lcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="32.833583208395808"/>
+            <point key="canvasLocation" x="2128.8000000000002" y="366.56671664167919"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="nIL-H3-LNl">
@@ -162,6 +162,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6dJ-fp-zcY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lQK-IX-zJy">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -174,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="-1052" y="33"/>
         </scene>
-        <!--Superhero View Controller-->
+        <!--Movies-->
         <scene sceneID="MFd-J0-EHY">
             <objects>
                 <viewController id="ryA-22-CHI" customClass="SuperheroViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
@@ -208,6 +209,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="posterImageView" destination="F4e-F9-5n4" id="HvW-Lg-3D1"/>
+                                            <segue destination="eEh-wy-10y" kind="show" id="0JU-3b-rQW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -216,14 +218,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="VLi-w3-XTm"/>
                     </view>
-                    <navigationItem key="navigationItem" id="I1t-Q5-yQO"/>
+                    <navigationItem key="navigationItem" title="Movies" id="I1t-Q5-yQO"/>
                     <connections>
                         <outlet property="collectionView" destination="VKq-y8-rCY" id="K4r-QO-MZg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRt-D1-MoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178.40000000000001" y="806.44677661169419"/>
+            <point key="canvasLocation" x="-177" y="807"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="5Uk-Q6-fLh">
@@ -249,4 +251,7 @@
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0JU-3b-rQW"/>
+    </inferredMetricsTieBreakers>
 </document>

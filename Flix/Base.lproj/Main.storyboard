@@ -67,7 +67,7 @@
                                                 <constraint firstItem="MsE-8y-ZWa" firstAttribute="top" secondItem="Rs7-oh-Q78" secondAttribute="bottom" constant="8" id="YeI-8l-fDr"/>
                                                 <constraint firstAttribute="trailing" secondItem="MsE-8y-ZWa" secondAttribute="trailing" constant="8" id="adD-ZW-SqL"/>
                                                 <constraint firstItem="fWZ-Dx-QAY" firstAttribute="leading" secondItem="4Bc-fa-LBh" secondAttribute="leading" constant="8" id="b1e-yo-maZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="fWZ-Dx-QAY" secondAttribute="bottom" constant="8" id="hxk-Bg-sZQ"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fWZ-Dx-QAY" secondAttribute="bottom" constant="8" id="hxk-Bg-sZQ"/>
                                                 <constraint firstItem="Rs7-oh-Q78" firstAttribute="top" secondItem="fWZ-Dx-QAY" secondAttribute="top" id="qFl-eN-Z2Z"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MsE-8y-ZWa" secondAttribute="bottom" constant="8" id="tgn-hG-3EQ"/>
                                             </constraints>
@@ -290,6 +290,6 @@
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FUE-91-HOx"/>
+        <segue reference="0JU-3b-rQW"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -38,7 +38,6 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars: The Last Jedi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rs7-oh-Q78">
                                                     <rect key="frame" x="142" y="8" width="225" height="20.5"/>
-                                                    <color key="backgroundColor" red="0.4196482332" green="0.50336800530000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -52,7 +51,6 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsE-8y-ZWa">
                                                     <rect key="frame" x="142" y="36.5" width="225" height="93.5"/>
-                                                    <color key="backgroundColor" red="0.39226716709999998" green="1" blue="0.45568883259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <string key="text">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -290,6 +288,6 @@
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0JU-3b-rQW"/>
+        <segue reference="FUE-91-HOx"/>
     </inferredMetricsTieBreakers>
 </document>

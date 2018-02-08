@@ -12,7 +12,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var movies : [[String: Any]] = []
+    var movies : [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
         let okayAction = UIAlertAction(title: "Okay", style: .default) { (action) in }
         alertController.addAction(okayAction)
         
+        /*
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -53,6 +54,16 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
         }
         
         task.resume()
+        */
+        
+        MovieApiManager().nowPlayingMovies { (movies: [Movie]?, error: Error?) in
+            if let movies = movies {
+                self.movies = movies
+                self.collectionView.reloadData()
+                //self.refreshControl.endRefreshing()
+                //self.activityIndicator.stopAnimating()
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -62,10 +73,16 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
         let movie = movies[indexPath.item]
+        /*
         if let posterPathString = movie["poster_path"] as? String {
             let baseURLString = "https://image.tmdb.org/t/p/w500"
             let posterURL = URL(string: baseURLString + posterPathString)!
             cell.posterImageView.af_setImage(withURL: posterURL)
+        }
+        */
+        
+        if let posterPathURL = movie.posterURL {
+            cell.posterImageView.af_setImage(withURL: posterPathURL)
         }
         return cell
     }

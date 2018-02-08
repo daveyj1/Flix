@@ -17,9 +17,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     
-    var movie: [String : Any]?
-    
-    
+    var movie: Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +26,7 @@ class DetailViewController: UIViewController {
         posterImageView.layer.borderWidth = 2
         
         if let movie = movie {
+            /*
             titleLabel.text = movie["title"] as? String
             releaseDateLabel.text = movie["release_date"] as? String
             overviewLabel.text = movie["overview"] as? String
@@ -42,9 +41,15 @@ class DetailViewController: UIViewController {
             backdropImageVIew.af_setImage(withURL: backdropURL)
             let posterURL = URL(string: baseURLString + posterPathString)!
             posterImageView.af_setImage(withURL: posterURL)
+            */
+            
+            titleLabel.text = movie.title
+            releaseDateLabel.text = movie.releaseDate
+            overviewLabel.text = movie.overview
+            overviewLabel.adjustsFontSizeToFitWidth = true
+            backdropImageVIew.af_setImage(withURL: movie.backdropURL)
+            posterImageView.af_setImage(withURL: movie.posterURL)
         }
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
